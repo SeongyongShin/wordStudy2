@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChapterVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Chapter" id="Y6W-OH-hqX" customClass="ChapterVC" customModule="wordstudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c0-sg-DpM">
+                                <rect key="frame" x="41" y="57.5" width="43" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sg2-Nu-lE0">
+                                <rect key="frame" x="20" y="57.5" width="16" height="22.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBh-EV-prM">
+                                <rect key="frame" x="0.0" y="44" width="99" height="45"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <segue destination="wWq-PY-q2q" kind="unwind" unwindAction="unwindToSub:" id="pgZ-GB-XvP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaP-Sf-wqD" customClass="BaseButton" customModule="wordstudy" customModuleProvider="target">
+                                <rect key="frame" x="270" y="64" width="124" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="EN &lt; - &gt; KO"/>
+                                <connections>
+                                    <action selector="changeLang:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BwT-eF-TZt"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M09-ZY-qeb">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Spa-NN-e8I">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KBh-EV-prM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1bX-O0-Efl"/>
+                            <constraint firstItem="KBh-EV-prM" firstAttribute="trailing" secondItem="0c0-sg-DpM" secondAttribute="trailing" constant="15" id="2Nb-BX-NON"/>
+                            <constraint firstItem="M09-ZY-qeb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3S8-Sq-4Y8"/>
+                            <constraint firstItem="UaP-Sf-wqD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="3vv-hi-lyK"/>
+                            <constraint firstItem="KBh-EV-prM" firstAttribute="bottom" secondItem="Sg2-Nu-lE0" secondAttribute="bottom" constant="10" id="5Cg-L9-Zkc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UaP-Sf-wqD" secondAttribute="trailing" constant="20" id="9nx-V2-LAu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="M09-ZY-qeb" secondAttribute="bottom" id="CnZ-sM-Upo"/>
+                            <constraint firstItem="0c0-sg-DpM" firstAttribute="leading" secondItem="Sg2-Nu-lE0" secondAttribute="trailing" constant="5" id="JuZ-rj-J8Y"/>
+                            <constraint firstItem="M09-ZY-qeb" firstAttribute="top" secondItem="UaP-Sf-wqD" secondAttribute="bottom" constant="30" id="WeE-qQ-4e5"/>
+                            <constraint firstItem="0c0-sg-DpM" firstAttribute="centerY" secondItem="Sg2-Nu-lE0" secondAttribute="centerY" id="fIN-eD-Uve"/>
+                            <constraint firstItem="KBh-EV-prM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hC3-08-bY2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M09-ZY-qeb" secondAttribute="trailing" id="i14-Zy-5gt"/>
+                            <constraint firstItem="UaP-Sf-wqD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.3" id="tYQ-ht-glY"/>
+                            <constraint firstItem="Sg2-Nu-lE0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="vCZ-Lv-eCF"/>
+                            <constraint firstItem="Sg2-Nu-lE0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="yKs-xt-DKU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeLangBtn" destination="UaP-Sf-wqD" id="3b0-LE-bk5"/>
+                        <outlet property="contentCV" destination="M09-ZY-qeb" id="q7L-P6-8K4"/>
+                        <segue destination="Tav-LB-ndC" kind="show" identifier="goToWordTest" id="6yX-Bn-vx9"/>
+                        <segue destination="wzx-mY-P7n" kind="show" identifier="goToWordList" id="rsF-GF-oot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wWq-PY-q2q" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="51.5625"/>
+        </scene>
+        <!--WordTest-->
+        <scene sceneID="ucr-zZ-5HM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordTest" referencedIdentifier="WordTest" id="Tav-LB-ndC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="w7e-JM-uUu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ea-X6-tUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-86"/>
+        </scene>
+        <!--WordList-->
+        <scene sceneID="8k9-Db-NNf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordList" referencedIdentifier="WordList" id="wzx-mY-P7n" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aBV-Me-Hy6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyh-rO-TNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

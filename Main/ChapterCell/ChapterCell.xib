@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChapterCell" id="gTV-IL-0wX" customClass="ChapterCell" customModule="wordstudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="545" height="129"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZx-cQ-RMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="545" height="129"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books.vertical" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SEc-tR-0OV">
+                                <rect key="frame" x="20" y="9" width="109" height="110"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M0-0J-XVm" customClass="BaseLabel" customModule="wordstudy" customModuleProvider="target">
+                                <rect key="frame" x="149" y="51.5" width="376" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEXT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0dm-RQ-4IQ" customClass="BaseLabel" customModule="wordstudy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="545" height="129"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0dm-RQ-4IQ" firstAttribute="top" secondItem="hZx-cQ-RMJ" secondAttribute="top" id="0Ng-Hj-RDC"/>
+                            <constraint firstItem="SEc-tR-0OV" firstAttribute="width" secondItem="hZx-cQ-RMJ" secondAttribute="width" multiplier="0.2" id="E0M-Ec-qMp"/>
+                            <constraint firstItem="9M0-0J-XVm" firstAttribute="height" secondItem="hZx-cQ-RMJ" secondAttribute="height" multiplier="0.2" id="JjF-UZ-TJn"/>
+                            <constraint firstItem="0dm-RQ-4IQ" firstAttribute="leading" secondItem="hZx-cQ-RMJ" secondAttribute="leading" id="OXE-ot-Q4g"/>
+                            <constraint firstItem="9M0-0J-XVm" firstAttribute="leading" secondItem="SEc-tR-0OV" secondAttribute="trailing" constant="20" id="Q8J-vh-4pb"/>
+                            <constraint firstAttribute="bottom" secondItem="0dm-RQ-4IQ" secondAttribute="bottom" id="Q8g-eh-Y7J"/>
+                            <constraint firstItem="SEc-tR-0OV" firstAttribute="leading" secondItem="hZx-cQ-RMJ" secondAttribute="leading" constant="20" id="SGP-OR-aJq"/>
+                            <constraint firstAttribute="bottom" secondItem="SEc-tR-0OV" secondAttribute="bottom" constant="10" id="U4i-Lv-ibj"/>
+                            <constraint firstAttribute="trailing" secondItem="0dm-RQ-4IQ" secondAttribute="trailing" id="Vdt-lL-p2p"/>
+                            <constraint firstAttribute="trailing" secondItem="9M0-0J-XVm" secondAttribute="trailing" constant="20" id="ecL-Rj-jGJ"/>
+                            <constraint firstItem="9M0-0J-XVm" firstAttribute="centerY" secondItem="SEc-tR-0OV" secondAttribute="centerY" id="rbM-MP-ZRg"/>
+                            <constraint firstItem="SEc-tR-0OV" firstAttribute="top" secondItem="hZx-cQ-RMJ" secondAttribute="top" constant="10" id="xOb-dK-Jjq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="hZx-cQ-RMJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bNa-qt-fcb"/>
+                <constraint firstAttribute="bottom" secondItem="hZx-cQ-RMJ" secondAttribute="bottom" id="cKf-hr-hXA"/>
+                <constraint firstItem="hZx-cQ-RMJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="q4N-63-isr"/>
+                <constraint firstAttribute="trailing" secondItem="hZx-cQ-RMJ" secondAttribute="trailing" id="zSS-by-iS1"/>
+            </constraints>
+            <size key="customSize" width="545" height="129"/>
+            <connections>
+                <outlet property="backgroundV" destination="hZx-cQ-RMJ" id="ftB-bT-1B6"/>
+                <outlet property="chapterIV" destination="SEc-tR-0OV" id="bgy-Dk-Ba5"/>
+                <outlet property="chapterLabel" destination="9M0-0J-XVm" id="Z4n-sS-CKP"/>
+                <outlet property="smallText" destination="0dm-RQ-4IQ" id="T4e-lU-X8b"/>
+            </connections>
+            <point key="canvasLocation" x="786" y="73"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
